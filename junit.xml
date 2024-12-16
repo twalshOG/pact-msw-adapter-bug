@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="2" failures="1" errors="0" time="2.016">
+    <testsuite name="tests/AnimalTable.pact.test.tsx" timestamp="2024-12-16T22:10:45.763Z" hostname="MAC-TWALSH" tests="1" failures="1" errors="0" skipped="0" time="1.028533167">
+        <testcase classname="tests/AnimalTable.pact.test.tsx" name="renders table with a peice of content and capture pact" time="1.026976041">
+            <system-out>
+  Outgoing request: GET http://localhost:3030/v2/animals
+  request:start
+  [pact-msw-adapter] Checking request against url filters
+    {
+      urlString: &apos;http://localhost:3030/v2/animals&apos;,
+      providerFilter: true,
+      includeFilter: true,
+      excludeFilter: true,
+      matchIsAllowed: true
+    }
+    [pact-msw-adapter] Matching request
+
+            </system-out>
+            <failure message="Unable to find an element by: [data-testid=&quot;tableAnimal_1&quot;]
+
+Ignored nodes: comments, script, style
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div[39m
+      [33mclass[39m=[32m&quot;App&quot;[39m
+    [36m&gt;[39m
+      [36m&lt;header[39m
+        [33mclass[39m=[32m&quot;App-header&quot;[39m
+      [36m/&gt;[39m
+      [0mTEST PAGE[0m
+      [36m&lt;h2&gt;[39m
+        [0mAnimals[0m
+      [36m&lt;/h2&gt;[39m
+      [36m&lt;table[39m
+        [33mclass[39m=[32m&quot;animalTable&quot;[39m
+      [36m&gt;[39m
+        [36m&lt;thead&gt;[39m
+          [36m&lt;tr&gt;[39m
+            [36m&lt;th&gt;[39m
+              [0mName[0m
+            [36m&lt;/th&gt;[39m
+            [36m&lt;th&gt;[39m
+              [0mIs awesome[0m
+            [36m&lt;/th&gt;[39m
+          [36m&lt;/tr&gt;[39m
+        [36m&lt;/thead&gt;[39m
+        [36m&lt;tbody /&gt;[39m
+      [36m&lt;/table&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m
+
+Ignored nodes: comments, script, style
+[36m&lt;html&gt;[39m
+  [36m&lt;head /&gt;[39m
+  [36m&lt;body&gt;[39m
+    [36m&lt;div&gt;[39m
+      [36m&lt;div[39m
+        [33mclass[39m=[32m&quot;App&quot;[39m
+      [36m&gt;[39m
+        [36m&lt;header[39m
+          [33mclass[39m=[32m&quot;App-header&quot;[39m
+        [36m/&gt;[39m
+        [0mTEST PAGE[0m
+        [36m&lt;h2&gt;[39m
+          [0mAnimals[0m
+        [36m&lt;/h2&gt;[39m
+        [36m&lt;table[39m
+          [33mclass[39m=[32m&quot;animalTable&quot;[39m
+        [36m&gt;[39m
+          [36m&lt;thead&gt;[39m
+            [36m&lt;tr&gt;[39m
+              [36m&lt;th&gt;[39m
+                [0mName[0m
+              [36m&lt;/th&gt;[39m
+              [36m&lt;th&gt;[39m
+                [0mIs awesome[0m
+              [36m&lt;/th&gt;[39m
+            [36m&lt;/tr&gt;[39m
+          [36m&lt;/thead&gt;[39m
+          [36m&lt;tbody /&gt;[39m
+        [36m&lt;/table&gt;[39m
+      [36m&lt;/div&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/body&gt;[39m
+[36m&lt;/html&gt;[39m" type="TestingLibraryElementError">
+TestingLibraryElementError: Unable to find an element by: [data-testid=&quot;tableAnimal_1&quot;]
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div
+      class=&quot;App&quot;
+    &gt;
+      &lt;header
+        class=&quot;App-header&quot;
+      /&gt;
+      TEST PAGE
+      &lt;h2&gt;
+        Animals
+      &lt;/h2&gt;
+      &lt;table
+        class=&quot;animalTable&quot;
+      &gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;
+              Name
+            &lt;/th&gt;
+            &lt;th&gt;
+              Is awesome
+            &lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody /&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+Ignored nodes: comments, script, style
+&lt;html&gt;
+  &lt;head /&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;div
+        class=&quot;App&quot;
+      &gt;
+        &lt;header
+          class=&quot;App-header&quot;
+        /&gt;
+        TEST PAGE
+        &lt;h2&gt;
+          Animals
+        &lt;/h2&gt;
+        &lt;table
+          class=&quot;animalTable&quot;
+        &gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;
+                Name
+              &lt;/th&gt;
+              &lt;th&gt;
+                Is awesome
+              &lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody /&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+ ❯ Proxy.waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ ❯ tests/AnimalTable.pact.test.tsx:84:9
+
+            </failure>
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/AnimalTable.test.ts" timestamp="2024-12-16T22:10:45.765Z" hostname="MAC-TWALSH" tests="1" failures="0" errors="0" skipped="0" time="0.035434084">
+        <testcase classname="tests/AnimalTable.test.ts" name="App &gt; renders table with a peice of content" time="0.034017584">
+        </testcase>
+    </testsuite>
+</testsuites>

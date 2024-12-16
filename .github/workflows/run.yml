@@ -1,0 +1,48 @@
+name: Demo Node releated failure
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+      
+jobs:
+    build-test:
+        name: Build and test
+        runs-on: ubuntu-latest
+        continue-on-error: true
+        strategy:
+            matrix:
+                node-version: [20.15, 20.16, 21, 22, 23]
+        steps:
+          - name: Checkout
+            id: checkout
+            uses: actions/checkout@v4
+    
+          # The https://github.com/pactflow/pact-msw-adapter will cause failures if you go above Node 20.15
+          - name: Setup Node.js
+            id: setup-node
+            uses: actions/setup-node@v4
+            with:
+              node-version: ${{ matrix.node-version }}
+              cache: yarn
+              cache-dependency-path: ./yarn.lock
+    
+          - name: Install Dependencies
+            run: yarn
+    
+          # For demo just building and running tests, not linting 
+          - name: Run build and tests
+            run: |
+              node -v
+              yarn ci
+          - name: Show test summary
+            if: failure() || success()
+            uses: test-summary/action@v2
+            with:
+                paths: |
+                  ${{ github.workspace }}/**/junit.xml
+
+
+
+
